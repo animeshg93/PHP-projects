@@ -43,13 +43,6 @@ class TodosController extends Controller
     	return view('todos.edit', compact('todo'));
     }
 
-    //enables a user to view the tasks
-    public function show($id){
-    	$todo = Todos::findorFail($id);
-
-    	return view('todos.show', compact('todo'));
-    }
-
     public function update($id, TodosRequest $request){
     	Todos::findorFail($id)->update($request->all());
 

@@ -8,9 +8,7 @@
 
 	{!! Form::model($todo, ['method' => 'PATCH', 'action' => ['TodosController@update', $todo->id]]) !!}
 	  	@include('todos.form', ['submit' => 'Update task'])
-	  	
 	{!! Form::close() !!}
-
 	@if ($errors->any)
 		@foreach ($errors->all() as $error)
 		  <ul class="alert alert-danger">
